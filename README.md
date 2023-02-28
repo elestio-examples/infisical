@@ -10,8 +10,4 @@ Deploy Infisical server with CI/CD on Elestio
 
 # Once deployed ...
 
-You can can open Infisical UI here:
-
-    URL: https://[CI_CD_DOMAIN]
-    email:[ADMIN_EMAIL]
-    password: [ADMIN_PASSWORD]
+You have to register with your email before the first use.
