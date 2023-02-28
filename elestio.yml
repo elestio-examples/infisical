@@ -45,7 +45,7 @@ environments:
   - key: "MONGO_PASSWORD"
     value: "example"
   - key: "SITE_URL"
-    value: "https://[CI_CD_DOMAIN]:8080"
+    value: "https://[CI_CD_DOMAIN]"
 
 config:
   runTime: "dockerCompose"
@@ -64,8 +64,8 @@ lifeCycleConfig:
   preRestoreCommand: "./scripts/preRestore.sh"
   postRestoreCommand: "./scripts/postRestore.sh"
   postDeployCommand: "./scripts/postDeploy.sh"
-webUI:
-  - url: "https://[CI_CD_DOMAIN]"
-    label: "Infisical Admin"
-    login: "[ADMIN_EMAIL]"
-    password: "[ADMIN_PASSWORD]"
+# webUI:
+#   - url: "https://[CI_CD_DOMAIN]"
+#     label: "Infisical Admin"
+#     login: "[ADMIN_EMAIL]"
+#     password: "[ADMIN_PASSWORD]"
