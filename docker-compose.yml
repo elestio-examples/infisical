@@ -34,8 +34,6 @@ services:
       - NEXT_PUBLIC_STRIPE_PRODUCT_PRO=${STRIPE_PRODUCT_PRO}
       - NEXT_PUBLIC_STRIPE_PRODUCT_TEAM=${STRIPE_PRODUCT_TEAM}
       - NEXT_PUBLIC_STRIPE_PRODUCT_STARTER=${STRIPE_PRODUCT_STARTER}
-    networks:
-      - infisical
 
   mongo:
     container_name: infisical-mongo
@@ -46,13 +44,4 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
     volumes:
-      - mongo-data:/data/db
-    networks:
-      - infisical
-
-volumes:
-  mongo-data:
-    driver: local
-
-networks:
-  infisical:
+      - ./mongo-data:/data/db
