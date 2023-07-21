@@ -7,7 +7,7 @@ services:
     ports:
       - 172.17.0.1:6443:80
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/default.conf:/etc/nginx/conf.d:ro
     depends_on:
       - frontend
       - backend
