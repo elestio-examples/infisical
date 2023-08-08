@@ -117,7 +117,7 @@ Here are some example snippets to help you get started creating a container.
 |  JWT_SERVICE_SECRET  |        service-secret-key         |
 |      MONGO_URL       |        mongodb://mongo-url        |
 |    MONGO_USERNAME    |          mongo-username           |
-|    MONGO_PASSWORD    |          mongo-username           |
+|    MONGO_PASSWORD    |          mongo-password           |
 |       SITE_URL       |          https://domain           |
 | ROOT_ENCRYPTION_KEY  |     your-root-encryption-key      |
 

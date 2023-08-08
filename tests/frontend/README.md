@@ -72,7 +72,7 @@ Here are some example snippets to help you get started creating a container.
             image: elestio4test/infisical-backend:${SOFTWARE_VERSION_TAG}
             env_file: ./.env
             environment:
-                - NODE_ENV=production
+                - NODE_ENV=${NODE_ENV}
 
         frontend:
             restart: always
@@ -98,6 +98,28 @@ Here are some example snippets to help you get started creating a container.
             volumes:
                 - ./mongo-data:/data/db
 
+### Environment variables
+
+|       Variable       |     Value (example)      |
+| :------------------: | :----------------------: |
+| SOFTWARE_VERSION_TAG |          latest          |
+|       NODE_ENV       |        production        |
+|       TEST_URL       |  http://yourdomain:3001  |
+|      SMTP_HOST       |      your.SMTP.host      |
+|      SMTP_PORT       |            25            |
+|     SMTP_SECURE      |          false           |
+|    SMTP_FROM_NAME    |        Infisical         |
+|  SMTP_FROM_ADDRESS   |       SMTP-domain        |
+|    ENCRYPTION_KEY    |         your-key         |
+|  JWT_SIGNUP_SECRET   |    signup-secret-key     |
+|  JWT_REFRESH_SECRET  |    refresh-secret-key    |
+|   JWT_AUTH_SECRET    |     auth-secret-key      |
+|  JWT_SERVICE_SECRET  |    service-secret-key    |
+|      MONGO_URL       |   mongodb://mongo-url    |
+|    MONGO_USERNAME    |      mongo-username      |
+|    MONGO_PASSWORD    |      mongo-password      |
+|       SITE_URL       |      https://domain      |
+| ROOT_ENCRYPTION_KEY  | your-root-encryption-key |
 
 # Maintenance
 
