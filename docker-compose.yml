@@ -10,6 +10,7 @@ services:
     env_file: ./.env
     environment:
       - NODE_ENV=production
+      - DB_CONNECTION_URI=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
 
   redis:
     image: redis
@@ -24,8 +25,10 @@ services:
   db-migration:
     image: infisical/infisical:${SOFTWARE_VERSION_TAG}
     env_file: .env
+    environment:
+      - DB_CONNECTION_URI=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
     command: npm run migration:latest
-    pull_policy: always
+    
     
   db:
     image: postgres:16-alpine
