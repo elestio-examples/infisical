@@ -36,7 +36,7 @@ environments:
     value: "f32f716d70a42c5703f4656015e76200"
   - key: "REDIS_URL"
     value: "redis://redis:6379"
-  - key: "POSTGRES_DB=infisical"
+  - key: "POSTGRES_DB"
     value: "infisical"
   - key: "POSTGRES_USER"
     value: "infisical"
