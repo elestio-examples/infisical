@@ -14,6 +14,7 @@ services:
 
   redis:
     image: redis
+    restart: always
     env_file: .env
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
