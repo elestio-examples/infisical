@@ -16,6 +16,8 @@ environments:
     value: "25"
   - key: "SMTP_USERNAME"
     value: ""
+  - key: "ADMIN_EMAIL"
+    value: "[EMAIL]"
   - key: "SMTP_PASSWORD"
     value: ""
   - key: "SMTP_SECURE"
@@ -61,3 +63,8 @@ lifeCycleConfig:
   preRestoreCommand: "./scripts/preRestore.sh"
   postRestoreCommand: "./scripts/postRestore.sh"
   postDeployCommand: "./scripts/postDeploy.sh"
+webUI:
+  - url: "https://[CI_CD_DOMAIN]"
+    label: "Infisical Admin"
+    login: "[ADMIN_EMAIL]"
+    password: "[ADMIN_PASSWORD]"
