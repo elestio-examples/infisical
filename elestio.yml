@@ -18,6 +18,8 @@ environments:
     value: ""
   - key: "ADMIN_EMAIL"
     value: "[EMAIL]"
+  - key: "ADMIN_PASSWORD"
+    value: "random_password"
   - key: "SMTP_PASSWORD"
     value: ""
   - key: "SMTP_SECURE"
